@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Carousel Project</title>
+    <style>
+      img{width:100%;}
+      .image__area img{    
+        width: 600px;
+        
+      }
+      .carousel{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        width: 600px;
+        height: 400px;
+        overflow: hidden;
+      }
+      .carousel .area__box{
+        position: absolute;
+      }
+      .image__area{
+        height: 400px;
+        display: flex;
+        overflow: hidden;
+        margin: 0 auto;
+        
+      }
+      .image__area.animated{
+        transition: all 0.5s ease-in;
+      }
+      .material-icons{
+        color:#fff;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      .material-icons.active{
+        color:#000;
+      }
+      .arrow__area{
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .material-icons.chevron_left{
+        position: absolute;
+        left:0;
+      }
+      .material-icons.navigate_next{
+        position: absolute;
+        right:0;
+      }
+      .material-icons.md-48 { font-size: 48px; }
+      .material-icons.md-10 { font-size: 10px; }
+      .dot__area{
+        left:50%;
+        bottom:0;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <div class="image-box">
+        <img src="images/vanilla_coding_logo.png" />
+      </div>
+      <h1>Carousel</h1>
+
+      <!-- Carousel Start -->
+      <div class="carousel">
+        <div class="image__area area__box">
+          <img src="images/image-1.png" alt="이미지1번">
+          <img src="images/image-2.png" alt="이미지2번">
+          <img src="images/image-3.png" alt="이미지3번">
+          <img src="images/image-4.png" alt="이미지4번">
+          <img src="images/image-5.png" alt="이미지5번">
+        </div>
+        <div class="arrow__area area__box">
+          <span class="material-icons md-48 chevron_left">chevron_left</span>
+          <span class="material-icons md-48 navigate_next">navigate_next</span>
+        </div>
+        <div class="dot__area area__box">
+
+        </div>
+      </div>
+      <!-- Carousel End -->
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
